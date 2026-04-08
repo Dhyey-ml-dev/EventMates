@@ -89,15 +89,17 @@ app.use(errorHandler);
 
 // ======================== Start Server ========================
 
-app.listen(PORT, () => {
-  console.log(`
-  ╔════════════════════════════════════════╗
-  ║  🚀 EventMates Server is Running       ║
-  ║  📍 Port: ${PORT}                      
-  ║  🌍 Frontend: ${process.env.FRONTEND_URL}
-  ║  🔧 Environment: ${process.env.NODE_ENV || 'development'}
-  ╚════════════════════════════════════════╝
-  `);
-});
+if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`
+    ╔════════════════════════════════════════╗
+    ║  🚀 EventMates Server is Running       ║
+    ║  📍 Port: ${PORT}                      
+    ║  🌍 Frontend: ${process.env.FRONTEND_URL}
+    ║  🔧 Environment: ${process.env.NODE_ENV || 'development'}
+    ╚════════════════════════════════════════╝
+    `);
+  });
+}
 
 export default app;

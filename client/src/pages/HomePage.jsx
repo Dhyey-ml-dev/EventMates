@@ -103,10 +103,10 @@ export const HomePage = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
-                onClick={() => navigate('/signup?role=organizer')}
+                onClick={() => navigate('/signup')}
                 className="group w-full sm:w-auto bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur-md hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Hire Volunteers
+                Create Account
                 <ArrowUpRight className="w-5 h-5 opacity-70" />
               </button>
             </motion.div>
@@ -347,34 +347,6 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* ======================== FINAL CTA ======================== */}
-      <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div {...fadeUp}>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
-              Ready to elevate your experience?
-            </h2>
-            <p className="text-xl text-slate-600 mb-10 font-light">
-              Join the network today. Registration is free and takes less than two minutes.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => navigate('/signup')}
-                className="bg-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-600/20"
-              >
-                Create Account
-              </button>
-              <button
-                onClick={() => navigate('/events')}
-                className="border border-slate-300 text-slate-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-slate-50 transition-colors"
-              >
-                Browse Listings
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };

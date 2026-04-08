@@ -5,7 +5,9 @@
 @tailwind utilities;
 
 /* ======================== GLOBAL RESET ======================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -31,7 +33,12 @@ body {
 }
 
 /* ======================== TYPOGRAPHY ======================== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -43,11 +50,15 @@ button {
 }
 
 /* ======================== FORMS ======================== */
-input, textarea, select {
+input,
+textarea,
+select {
   @apply transition-all duration-200;
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
 }
 
@@ -136,23 +147,49 @@ input:focus, textarea:focus, select:focus {
 
 /* ======================== ANIMATIONS ======================== */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-float {
@@ -180,12 +217,10 @@ input:focus, textarea:focus, select:focus {
 
 /* Hero Section */
 .hero-overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(30, 27, 75, 0.92) 0%,
-    rgba(79, 70, 229, 0.75) 50%,
-    rgba(139, 92, 246, 0.6) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(30, 27, 75, 0.92) 0%,
+      rgba(79, 70, 229, 0.75) 50%,
+      rgba(139, 92, 246, 0.6) 100%);
 }
 
 /* Navigation */

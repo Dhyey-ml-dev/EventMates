@@ -158,16 +158,10 @@ export const Navbar = () => {
               <>
                 <Link
                   to="/login"
-                  className="text-slate-600 hover:text-slate-900 font-medium text-sm transition-colors"
+                  className="bg-slate-900 text-white px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-slate-800 transition-colors"
                 >
                   Sign In
                 </Link>
-                <button
-                  onClick={() => navigate('/signup')}
-                  className="bg-indigo-600 text-white px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-indigo-700 transition-colors"
-                >
-                  Create Account
-                </button>
               </>
             )}
           </div>
@@ -253,15 +247,9 @@ export const Navbar = () => {
                   <div className="flex flex-col gap-3">
                     <button
                       onClick={() => navigate('/login')}
-                      className="w-full py-3 border border-slate-200 text-slate-700 rounded-lg text-sm font-medium"
+                      className="w-full py-3 bg-slate-900 text-white rounded-lg text-sm font-medium"
                     >
                       Sign In
-                    </button>
-                    <button
-                      onClick={() => navigate('/signup')}
-                      className="w-full py-3 bg-indigo-600 text-white rounded-lg text-sm font-medium"
-                    >
-                      Create Account
                     </button>
                   </div>
                 )}
